@@ -1,10 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a989a828-d88f-4fda-bc0f-f43bb387baa8" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/de/htwg/se/roulette/model/ModelWorksheet.sc" />
+    <list default="true" id="a989a828-d88f-4fda-bc0f-f43bb387baa8" name="Default" comment="1. added the class table and the required matrix&#10;2. ScalaTest class added">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/de/htwg/se/roulette/table.scala" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/scala/de/htwg/se/roulette/model/test1.scala" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/de-htwg-roulette-master.iml" afterPath="$PROJECT_DIR$/.idea/modules/de-htwg-roulette-master.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/workshet1.sc" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/de-htwg-roulette-master-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/de-htwg-roulette-master-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.properties" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/de-htwg-roulette-master-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/default/de-htwg-roulette-master-build/scala_2.12/sbt_1.0/0.1.0-SNAPSHOT/resolved.xml.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-compile-internal.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-compile-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-compile.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-compile.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-optional.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-optional.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-plugin.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-plugin.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-pom.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-pom.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-provided.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-provided.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-runtime-internal.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-runtime-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-runtime.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-runtime.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-scala-tool.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-scala-tool.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-test-internal.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-test-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-test.xml" afterPath="$PROJECT_DIR$/project/target/scala-2.12/sbt-1.0/resolution-cache/reports/default-de-htwg-roulette-master-build-test.xml" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/project/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
+      <change beforePath="$PROJECT_DIR$/target/.history" afterPath="$PROJECT_DIR$/target/.history" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/de-htwg-roulette-master$sources/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/de-htwg-roulette-master$sources/0.1/resolved.xml.properties" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/de-htwg-roulette-master$sources/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/de-htwg-roulette-master$sources/0.1/resolved.xml.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/de-htwg-roulette-master_2.12/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/de-htwg-roulette-master_2.12/0.1/resolved.xml.properties" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/de-htwg-roulette-master_2.12/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/default/de-htwg-roulette-master_2.12/0.1/resolved.xml.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-compile-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-compile-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-compile.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-compile.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-optional.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-optional.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-plugin.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-plugin.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-pom.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-pom.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-provided.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-provided.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-runtime-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-runtime.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-runtime.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-scala-tool.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-scala-tool.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-test-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-test-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-test.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-test.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-compile-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-compile-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-compile.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-compile.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-optional.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-optional.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-plugin.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-plugin.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-pom.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-pom.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-provided.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-provided.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-runtime-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-runtime.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-runtime.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-scala-tool.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-scala-tool.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-test-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-test-internal.xml" />
+      <change beforePath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-test.xml" afterPath="$PROJECT_DIR$/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master_2.12-test.xml" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/input_dsp" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.12/output_dsp" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/inputs" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.12/output" />
+      <change beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" />
+      <change beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -27,8 +83,38 @@
       <file leaf-file-name="ModelWorksheet.sc" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/de/htwg/se/roulette/model/ModelWorksheet.sc">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="table.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/de/htwg/se/roulette/table.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="765">
+              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.sbt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.sbt">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+              <caret line="0" column="33" lean-forward="true" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test1.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/scala/de/htwg/se/roulette/model/test1.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -40,6 +126,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Scala Worksheet" />
+        <option value="Scala Object" />
       </list>
     </option>
   </component>
@@ -50,6 +137,19 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="branch1" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -60,7 +160,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/scala/workshet1.sc" />
+        <option value="$PROJECT_DIR$/build.sbt" />
+        <option value="$PROJECT_DIR$/src/test/scala/de/htwg/se/roulette/model/test1.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/de/htwg/se/roulette/model/+=.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/de/htwg/se/roulette/model/ModelWorksheet.sc" />
+        <option value="$PROJECT_DIR$/src/main/scala/de/htwg/se/roulette/table.scala" />
       </list>
     </option>
   </component>
@@ -86,7 +190,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -181,43 +284,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="de.htwg.roulette-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="de.htwg.roulette-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-              <item name="htwg" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="de.htwg.roulette-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="de.htwg.roulette-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-              <item name="htwg" type="462c0819:PsiDirectoryNode" />
-              <item name="se" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="de.htwg.roulette-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="de.htwg.roulette-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="de" type="462c0819:PsiDirectoryNode" />
-              <item name="htwg" type="462c0819:PsiDirectoryNode" />
-              <item name="se" type="462c0819:PsiDirectoryNode" />
-              <item name="roulette" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -323,7 +397,7 @@
     </configuration>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1539600115787" />
+    <option name="lastUpdateTimestamp" value="1539864450906" />
     <option name="availableProjects">
       <map>
         <entry>
@@ -353,7 +427,6 @@
     </option>
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
         <entry key="$PROJECT_DIR$/../htwg-scala-seed-master 2" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../htwg.se.Roulette" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../htwg.se.roulette" value="PREVIEW" />
@@ -388,7 +461,21 @@
       <option name="project" value="LOCAL" />
       <updated>1539861761159</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="the folders arranged">
+      <created>1539862230313</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1539862230313</updated>
+    </task>
+    <task id="LOCAL-00004" summary="1. added the class table and the required matrix&#10;2. ScalaTest class added">
+      <created>1540141681810</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1540141681810</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -397,7 +484,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="sbt" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -411,6 +498,8 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="sbt-shell-toolwindow" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -420,10 +509,8 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291714" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -432,14 +519,15 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="third commit" />
     <MESSAGE value="the folders arranged" />
-    <option name="LAST_COMMIT_MESSAGE" value="the folders arranged" />
+    <MESSAGE value="1. added the class table and the required matrix&#10;2. ScalaTest class added" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. added the class table and the required matrix&#10;2. ScalaTest class added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/workshet1.sc">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/de/htwg/se/roulette/model/ModelWorksheet.sc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -447,34 +535,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/workshet1.sc">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/workshet1.sc" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/workshet1.sc" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/workshet1.sc" />
+    <entry file="file://$PROJECT_DIR$/src/main/scala/workshet1.sc" />
+    <entry file="file://$PROJECT_DIR$/src/test/scala/de/htwg/se/roulette/model/test1.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/workshet1.sc">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/de/htwg/se/roulette/model/+=.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="30">
+          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/workshet1.sc">
+    <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="33" lean-forward="true" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/de/htwg/se/roulette/table.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/de/htwg/se/roulette/model/ModelWorksheet.sc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
+        <state relative-caret-position="165">
+          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding />
         </state>
       </provider>
