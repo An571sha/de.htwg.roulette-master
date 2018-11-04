@@ -1,8 +1,8 @@
 package de.htwg.se.roulette.model
-import de.htwg.se.roulette.model.{PossibleBets}
+import de.htwg.se.roulette.model.Rtable
 
 class Game {
-  val y = 0 to 36 toArray
+  val y  = 0 to 36 toArray
   val filter = (predicate: Int => Boolean, xs: Array[Int]) => {
     for (x <- xs if predicate(x)) yield x
   }
@@ -15,7 +15,9 @@ class Game {
 
   val Odd = filter(isOdd, y)
 
-  def WhichBet(whichBet:Int) : Unit = {
+  val whichBet = Rtable().promptBet()
+
+  def WhichBet(whichBet : Int): Unit = {
 
     if(whichBet == 0) {
       PossibleBets(0).PossibleOptions()
@@ -60,7 +62,18 @@ class Game {
   }
 
   def CheckBet() : Boolean = {
+    for (e <- RedOrBlack()) {
 
+      if (e.equals(wheel().value.nextInt()))
+        true
+    }
+    for (e <- OddOrEven()){
+
+      if(e.equals(wheel().value.nextInt()))
+        true
+    }
+
+    false
   }
 
 
