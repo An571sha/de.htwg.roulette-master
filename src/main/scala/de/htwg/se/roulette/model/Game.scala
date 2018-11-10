@@ -42,9 +42,9 @@ case class Game() {
   }
 
 
-  def Choice() : Int = {
-    val choice = scala.io.StdIn.readInt()
-    choice.intValue()
+  def Choice() : String = {
+    val choice = scala.io.StdIn.readLine()
+    choice.toString()
    }
 
   def RedOrBlack() : Array[Int] = {
@@ -74,12 +74,12 @@ case class Game() {
   def CheckBet() : Boolean = {
     for (e <- RedOrBlack()) {
 
-      if (e.equals(wheel().value.nextInt()))
+      if (e.equals(wheel().value))
         true
     }
     for (e <- OddOrEven()){
 
-      if(e.equals(wheel().value.nextInt()))
+      if(e.equals(wheel().value))
         true
     }
 
