@@ -1,41 +1,51 @@
 package de.htwg.se.roulette.model
 import de.htwg.se.roulette.model.Rtable
 
-class Game {
+case class Game() {
+
   val y  = 0 to 36 toArray
+
   val filter = (predicate: Int => Boolean, xs: Array[Int]) => {
     for (x <- xs if predicate(x)) yield x
   }
 
-  val isEven = (x: Int) => x % 2 == 0
+  def isEven(x : Int) : Boolean = {
+    if (x % 2 == 0)
+      true
+    false
 
-  val isOdd  = (x:Int) => x % 2 != 0
+  }
+
+  def isOdd(x:Int): Boolean = {
+    if(x % 2 != 0)
+      true
+    false
+  }
 
   val Even = filter(isEven, y)
 
   val Odd = filter(isOdd, y)
 
-  val whichBet = Rtable().promptBet()
+  def WhichBet(choice :Int) : Array[Int] = {
 
-  def WhichBet(whichBet : Int): Unit = {
-
-    if(whichBet == 0) {
+    if(choice == 0) {
       PossibleBets(0).PossibleOptions()
-      println("please make a choice of Red or Black")
+      //println("please make a choice of Red or Black")
       RedOrBlack()
     }
-    if(whichBet == 1) {
+    if(choice == 1) {
       PossibleBets(0).PossibleOptions()
-      println("please make a choice of odd and even")
+      //println("please make a choice of odd and even")
       OddOrEven()
     }
+    Array(0)
   }
 
 
-  def Choice() : String = {
-    val choice = scala.io.StdIn.readLine()
-    choice
-  }
+  def Choice() : Int = {
+    val choice = scala.io.StdIn.readInt()
+    choice.intValue()
+   }
 
   def RedOrBlack() : Array[Int] = {
     if (Choice().equals("Red")) {
@@ -45,7 +55,7 @@ class Game {
     } else if (Choice().equals("Green")) {
       Array(0)
     } else {
-      println("please enter Red or Black only")
+      //println("please enter Red or Black only")
       null
     }
   }
