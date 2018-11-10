@@ -1,15 +1,25 @@
 package de.htwg.se.roulette.model
+import java.awt.Choice
+
 import de.htwg.se.roulette.model.Rtable
 
-class Game {
+case class Game() {
   val y  = 0 to 36 toArray
   val filter = (predicate: Int => Boolean, xs: Array[Int]) => {
     for (x <- xs if predicate(x)) yield x
   }
 
-  val isEven = (x: Int) => x % 2 == 0
+  def isEven(x : Int) : Boolean = {
+    if (x % 2 == 0)
+      return true
+    false
+  }
 
-  val isOdd  = (x:Int) => x % 2 != 0
+  def isOdd(x : Int): Boolean = {
+    if(x % 2 != 0)
+      return true
+    false
+  }
 
   val Even = filter(isEven, y)
 
@@ -17,14 +27,14 @@ class Game {
 
   val whichBet = Rtable().promptBet()
 
-  def WhichBet(whichBet : Int): Unit = {
+  def WhichBet(choice : Int): Array[Int] = {
 
-    if(whichBet == 0) {
+    if(choice == 0) {
       PossibleBets(0).PossibleOptions()
       println("please make a choice of Red or Black")
       RedOrBlack()
     }
-    if(whichBet == 1) {
+    if(choice == 1) {
       PossibleBets(0).PossibleOptions()
       println("please make a choice of odd and even")
       OddOrEven()
@@ -61,19 +71,19 @@ class Game {
     return null
   }
 
-  def CheckBet() : Boolean = {
+  def CheckBet() : Int = {
     for (e <- RedOrBlack()) {
 
       if (e.equals(wheel().value.nextInt()))
-        true
+        e
     }
     for (e <- OddOrEven()){
 
       if(e.equals(wheel().value.nextInt()))
-        true
+        e
     }
 
-    false
+    0
   }
 
 
