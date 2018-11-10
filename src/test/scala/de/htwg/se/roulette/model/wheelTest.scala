@@ -8,7 +8,7 @@ class wheelTest extends WordSpec with Matchers {
     "spinned using the method spin" should {
       val colourCode: String =  wheel().wheelColor(7)
       "have value 7" in {
-        colourCode should be("red")
+        colourCode should be("Red")
       }
       /*wheel().wheelColor(0)
       "have value 0" in {
