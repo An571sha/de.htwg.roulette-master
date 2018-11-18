@@ -6,8 +6,8 @@
 		module="de-htwg-roulette-master$sources"
 		revision="0.1"
 		conf="provided"
-		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20181018140727"/>
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool, scoveragePlugin"
+		date="20181110180349"/>
 	<dependencies>
 	</dependencies>
 </ivy-report>

@@ -1,5 +1,5 @@
 [debug] :: resolving dependencies :: default#de-htwg-roulette-master$sources;0.1
-[debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool]
+[debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool, scoveragePlugin]
 [debug] 	validate = true
 [debug] 	refresh = false
 [debug] resolving dependencies for configuration 'compile'
@@ -726,37 +726,28 @@
 [debug] == resolving dependencies default#de-htwg-roulette-master$sources;0.1->jline#jline;2.14.6 [scala-tool->master(compile)]
 [debug] == resolving dependencies default#de-htwg-roulette-master$sources;0.1->jline#jline;2.14.6 [scala-tool->compile(*)]
 [debug] == resolving dependencies default#de-htwg-roulette-master$sources;0.1->jline#jline;2.14.6 [scala-tool->master]
+[debug] resolving dependencies for configuration 'scoveragePlugin'
+[debug] == resolving dependencies for default#de-htwg-roulette-master$sources;0.1 [scoveragePlugin]
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
-[debug] 		tried /Users/animesh/.ivy2/local/org.scalactic/scalactic_2.12/3.0.5/srcs/scalactic_2.12-sources.jar
-[debug] 		tried /Users/animesh/.ivy2/local/org.scalatest/scalatest_2.12/3.0.5/srcs/scalatest_2.12-sources.jar
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.7!scala-library.jar(src)
-[debug] 		tried https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.5/scalactic_2.12-3.0.5-sources.jar
-[debug] 		tried https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.5/scalatest_2.12-3.0.5-sources.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#scala-reflect;2.12.7!scala-reflect.jar(src)
-[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.7!scala-compiler.jar(src)
+[debug] 	[NOT REQUIRED] org.scalactic#scalactic_2.12;3.0.5!scalactic_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-library;2.12.7!scala-library.jar(src)
+[debug] 	[NOT REQUIRED] org.scalatest#scalatest_2.12;3.0.5!scalatest_2.12.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.12;1.0.6!scala-xml_2.12.jar(src)
+[debug] 	[NOT REQUIRED] org.scala-lang#scala-compiler;2.12.7!scala-compiler.jar(src)
 [debug] 	[NOT REQUIRED] jline#jline;2.14.6!jline.jar(src)
-[info] downloading https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.5/scalactic_2.12-3.0.5-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.5/scalactic_2.12-3.0.5-sources.jar
-[info] downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.5/scalatest_2.12-3.0.5-sources.jar ...
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.5/scalatest_2.12-3.0.5-sources.jar
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.5/scalactic_2.12-3.0.5-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalactic/scalactic_2.12/3.0.5/scalactic_2.12-3.0.5-sources.jar
-[info] 	[SUCCESSFUL ] org.scalactic#scalactic_2.12;3.0.5!scalactic_2.12.jar(src) (479ms)
-[debug] 	public: downloading https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.5/scalatest_2.12-3.0.5-sources.jar.sha1
-[debug] sha1 OK for https://repo1.maven.org/maven2/org/scalatest/scalatest_2.12/3.0.5/scalatest_2.12-3.0.5-sources.jar
-[info] 	[SUCCESSFUL ] org.scalatest#scalatest_2.12;3.0.5!scalatest_2.12.jar(src) (1640ms)
-[debug] :: resolution report :: resolve 60ms :: artifacts dl 1644ms
-[debug] 	report for default#de-htwg-roulette-master$sources;0.1 compile produced in /Users/animesh/Desktop/de.htwg.roulette-master/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-compile.xml
-[debug] 	report for default#de-htwg-roulette-master$sources;0.1 runtime produced in /Users/animesh/Desktop/de.htwg.roulette-master/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-runtime.xml
-[debug] 	report for default#de-htwg-roulette-master$sources;0.1 test produced in /Users/animesh/Desktop/de.htwg.roulette-master/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-test.xml
-[debug] 	report for default#de-htwg-roulette-master$sources;0.1 provided produced in /Users/animesh/Desktop/de.htwg.roulette-master/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-provided.xml
-[debug] 	report for default#de-htwg-roulette-master$sources;0.1 optional produced in /Users/animesh/Desktop/de.htwg.roulette-master/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-optional.xml
-[debug] 	report for default#de-htwg-roulette-master$sources;0.1 compile-internal produced in /Users/animesh/Desktop/de.htwg.roulette-master/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-compile-internal.xml
-[debug] 	report for default#de-htwg-roulette-master$sources;0.1 runtime-internal produced in /Users/animesh/Desktop/de.htwg.roulette-master/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-runtime-internal.xml
-[debug] 	report for default#de-htwg-roulette-master$sources;0.1 test-internal produced in /Users/animesh/Desktop/de.htwg.roulette-master/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-test-internal.xml
-[debug] 	report for default#de-htwg-roulette-master$sources;0.1 plugin produced in /Users/animesh/Desktop/de.htwg.roulette-master/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-plugin.xml
-[debug] 	report for default#de-htwg-roulette-master$sources;0.1 pom produced in /Users/animesh/Desktop/de.htwg.roulette-master/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-pom.xml
-[debug] 	report for default#de-htwg-roulette-master$sources;0.1 scala-tool produced in /Users/animesh/Desktop/de.htwg.roulette-master/target/scala-2.12/resolution-cache/reports/default-de-htwg-roulette-master$sources-scala-tool.xml
-[debug] 	resolve done (60ms resolve - 1644ms download)
+[debug] :: resolution report :: resolve 48ms :: artifacts dl 8ms
+[debug] 	report for default#de-htwg-roulette-master$sources;0.1 compile produced in C:\Users\jan\.IntelliJIdea2018.1\de.htwg.roulette-master\target\scala-2.12\resolution-cache\reports\default-de-htwg-roulette-master$sources-compile.xml
+[debug] 	report for default#de-htwg-roulette-master$sources;0.1 runtime produced in C:\Users\jan\.IntelliJIdea2018.1\de.htwg.roulette-master\target\scala-2.12\resolution-cache\reports\default-de-htwg-roulette-master$sources-runtime.xml
+[debug] 	report for default#de-htwg-roulette-master$sources;0.1 test produced in C:\Users\jan\.IntelliJIdea2018.1\de.htwg.roulette-master\target\scala-2.12\resolution-cache\reports\default-de-htwg-roulette-master$sources-test.xml
+[debug] 	report for default#de-htwg-roulette-master$sources;0.1 provided produced in C:\Users\jan\.IntelliJIdea2018.1\de.htwg.roulette-master\target\scala-2.12\resolution-cache\reports\default-de-htwg-roulette-master$sources-provided.xml
+[debug] 	report for default#de-htwg-roulette-master$sources;0.1 optional produced in C:\Users\jan\.IntelliJIdea2018.1\de.htwg.roulette-master\target\scala-2.12\resolution-cache\reports\default-de-htwg-roulette-master$sources-optional.xml
+[debug] 	report for default#de-htwg-roulette-master$sources;0.1 compile-internal produced in C:\Users\jan\.IntelliJIdea2018.1\de.htwg.roulette-master\target\scala-2.12\resolution-cache\reports\default-de-htwg-roulette-master$sources-compile-internal.xml
+[debug] 	report for default#de-htwg-roulette-master$sources;0.1 runtime-internal produced in C:\Users\jan\.IntelliJIdea2018.1\de.htwg.roulette-master\target\scala-2.12\resolution-cache\reports\default-de-htwg-roulette-master$sources-runtime-internal.xml
+[debug] 	report for default#de-htwg-roulette-master$sources;0.1 test-internal produced in C:\Users\jan\.IntelliJIdea2018.1\de.htwg.roulette-master\target\scala-2.12\resolution-cache\reports\default-de-htwg-roulette-master$sources-test-internal.xml
+[debug] 	report for default#de-htwg-roulette-master$sources;0.1 plugin produced in C:\Users\jan\.IntelliJIdea2018.1\de.htwg.roulette-master\target\scala-2.12\resolution-cache\reports\default-de-htwg-roulette-master$sources-plugin.xml
+[debug] 	report for default#de-htwg-roulette-master$sources;0.1 pom produced in C:\Users\jan\.IntelliJIdea2018.1\de.htwg.roulette-master\target\scala-2.12\resolution-cache\reports\default-de-htwg-roulette-master$sources-pom.xml
+[debug] 	report for default#de-htwg-roulette-master$sources;0.1 scala-tool produced in C:\Users\jan\.IntelliJIdea2018.1\de.htwg.roulette-master\target\scala-2.12\resolution-cache\reports\default-de-htwg-roulette-master$sources-scala-tool.xml
+[debug] 	report for default#de-htwg-roulette-master$sources;0.1 scoveragePlugin produced in C:\Users\jan\.IntelliJIdea2018.1\de.htwg.roulette-master\target\scala-2.12\resolution-cache\reports\default-de-htwg-roulette-master$sources-scoveragePlugin.xml
+[debug] 	resolve done (48ms resolve - 8ms download)

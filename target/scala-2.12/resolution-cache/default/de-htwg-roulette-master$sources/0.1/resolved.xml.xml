@@ -4,7 +4,7 @@
 		module="de-htwg-roulette-master$sources"
 		revision="0.1"
 		status="integration"
-		publication="20181018140727"
+		publication="20181110180349"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
@@ -18,6 +18,7 @@
 		<conf name="plugin" visibility="private" description=""/>
 		<conf name="pom" visibility="public" description=""/>
 		<conf name="scala-tool" visibility="private" description=""/>
+		<conf name="scoveragePlugin" visibility="private" description=""/>
 	</configurations>
 	<publications>
 	</publications>
