@@ -5,7 +5,7 @@ import org.scalatest._
 class GameSpec extends WordSpec with Matchers {
   "A number" when {
     "using method isEven" should {
-      val even =  new Game("Black").isEven(2)
+      val even = new Game("Black").isEven(2)
       "with value 2" in {
         even should be(true)
       }
@@ -17,34 +17,43 @@ class GameSpec extends WordSpec with Matchers {
       }
     }
   }
-  /*"A Bet" when {
-    "using method WhichBet" should {
-      val betnumbers = new Game("Black")
-      "with choice == 0" in {
-        betnumbers.WhichBet(0) should be(Game("Black").RedOrBlack())
-      }
+
+  "To chose the possilbe Numbers of a Bet" should {
+    val betarray = new Game("Red").NumberorColor()
+    "with the option Red" in {
+      betarray should be(Array(1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36))
     }
-    "using method WhichBet" should {
-      val betnumbers = new Game("Black")
-      "with choice == 1" in {
-        betnumbers.WhichBet(1) should be(Game("Black").OddOrEven())
-      }
+  }
+  "To chose the possilbe Numbers of a Bet" should {
+    val betarray = new Game("Black").NumberorColor()
+    "with the option Black" in {
+      betarray should be(Array(2, 4, 6, 8, 10, 13, 15, 17, 20, 22, 24, 26, 28, 31, 33, 35))
     }
-    "using method WhichBet" should {
-      val betnumbers = new Game("Black")
-      "with choice !=0 & != 1" in {
-        betnumbers.WhichBet(3) should be(Array(0))
-      }
+  }
+  "To chose the possilbe Numbers of a Bet" should {
+    val betarray = new Game("Green").NumberorColor()
+    "with the option Green" in {
+      betarray should be(Array(0))
     }
-  }*/
-  /*"A Choice" when {
-    "between Red or Black or Green" should {
-      val finalchoice = new Game("Red")
-      "when finalchoice is Red" in {
-        finalchoice.RedOrBlack() should be(Array(1, 3, 5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36))
-      }
+  }
+  "To chose the possilbe Numbers of a Bet" should {
+    val betarray = new Game("Even").NumberorColor()
+    "with the option Even" in {
+      betarray should be(Game("Even").Even)
     }
-  }*/
+  }
+  "To chose the possilbe Numbers of a Bet" should {
+    val betarray = new Game("Odd").NumberorColor()
+    "with the option Odd" in {
+      betarray should be(Game("Odd").Odd)
+    }
+  }
+  /*"if Check bet is true then black" should {
+    val black = new wheel().value;
+    "black is selected" in {
+      Game("Black").NumberorColor() should be(black)
+    }
+  }
   "The choice for Red or Black" when {
     "new" should {
       val RBnumbers = new Game("Red")
@@ -85,6 +94,5 @@ class GameSpec extends WordSpec with Matchers {
       }
     }
   }
-
-
+  */
 }
