@@ -17,7 +17,7 @@ class PlayerSpec extends WordSpec with Matchers {
       }
       "have a String presentation" in {
         player.toString should be("Your Name")
-        player.playerBet should be(0)
+        player.playerBet should be("bet")
         player.updateplayermoney(0) should be(0)
       }
     }
