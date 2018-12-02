@@ -28,8 +28,8 @@ case class Game(val choice: String) {
 
   def NumberorColor() : Array[Int] ={
     choice match {
-      case "Red" => return Array(1, 3, 5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36)
-      case "Black" => return Array(2,4,6,8,10,13,15,17,20,22,24,26,28,31,33,35)
+      case "Red" => return Array(1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36)
+      case "Black" => return Array(2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35)
       case "Green" => return Array(0)
       case "Even" => return Even
       case "Odd" => return Odd
@@ -38,7 +38,7 @@ case class Game(val choice: String) {
 
 
   def CheckBet() : Boolean = {
-    if (NumberorColor().contains(wheel().value))
+    if (NumberorColor().contains(Wheel(36).setRandom()))
       return true
     false
 

@@ -2,7 +2,7 @@ package de.htwg.se.roulette.model
 
  case class Rtable(val player: Player) {
 
-   def play(): Int ={
+   def play(): Unit ={
      if(player.playerBet.equals("Red")){
        if (Game("Red").CheckBet()){
          player.updateplayermoney(10)
@@ -31,7 +31,6 @@ package de.htwg.se.roulette.model
          player.updateplayermoney(-10)
        }
      }
-     player.money
    }
 
 
