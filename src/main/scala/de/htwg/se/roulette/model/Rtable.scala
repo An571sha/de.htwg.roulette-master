@@ -31,7 +31,7 @@ package de.htwg.se.roulette.model
          player.updateplayermoney(-10)
        }
      }
-     player.money
+     player.bankmoney
    }
 
 
