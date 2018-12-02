@@ -10,9 +10,9 @@ package de.htwg.se.roulette.model
 
     def playerBet: String = bet
 
-    def updateplayermoney(betMoney: Int): Unit = {
-      bankmoney += betMoney
-      //bankmoney
+    def updateplayermoney(betMoney: Int): Int = {
+      this.bankmoney = betMoney + bankmoney
+      bankmoney
     }
   }
 
