@@ -1,5 +1,5 @@
 package de.htwg.se.roulette
-import aview.Tui
+import de.htwg.se.roulette.aview.Tui
 import de.htwg.se.roulette.controller.Controller
 import de.htwg.se.roulette.model.{Player, Rtable}
 import scala.io.StdIn.readLine

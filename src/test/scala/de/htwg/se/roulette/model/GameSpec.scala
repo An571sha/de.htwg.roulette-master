@@ -27,7 +27,7 @@ class GameSpec extends WordSpec with Matchers {
   "To chose the possilbe Numbers of a Bet" should {
     val betarray = new Game("Black").NumberorColor()
     "with the option Black" in {
-      betarray should be(Array(2, 4, 6, 8, 10, 13, 15, 17, 20, 22, 24, 26, 28, 31, 33, 35))
+      betarray should be(Array(2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35))
     }
   }
   "To chose the possilbe Numbers of a Bet" should {
@@ -48,6 +48,13 @@ class GameSpec extends WordSpec with Matchers {
       betarray should be(Game("Odd").Odd)
     }
   }
+
+  /*"To check your bet, check bet" should {
+    val bet = new Game("Red").CheckBet()
+    "with only the number 1 as your random number" in {
+      bet should be(Wheel(1).setRandom())
+    }
+  }*/
   /*"if Check bet is true then black" should {
     val black = new wheel().value;
     "black is selected" in {
