@@ -1,4 +1,4 @@
-package model
+/*package model
 
 import de.htwg.se.roulette.model.{Game, Player, Wheel}
 
@@ -39,7 +39,7 @@ case class Grid(color: String) {
     string
   }
 }
-
+*/
 /*
   def ColorGrid() : Array[Int] ={
     color match {

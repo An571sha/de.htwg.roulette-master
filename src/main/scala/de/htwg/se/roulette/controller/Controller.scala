@@ -3,20 +3,22 @@ package de.htwg.se.roulette.controller
 import de.htwg.se.roulette.model.{Player, Rtable, Wheel}
 import de.htwg.se.roulette.util.Observable
 
-class Controller(var player: Player) extends Observable{
+import scala.swing.Publisher
+
+class Controller(var player: Player) extends Publisher{
   def createNewPlayer(name: String, bet: String, bankmoney: Int): Unit ={
     player = new Player(name, bet, bankmoney)
-    notifyObservers
+    //publish(new CellChange)
   }
   def createTable(): Int ={
     var rtable = new Rtable(player)
     var r = rtable.play()
-    notifyObservers
+    publish(new CellChange)
     r
   }
   def changeBet(newbet:String): Unit = {
     player = player.copy(bet = newbet)
-    notifyObservers
+    //publish(new CellChange)
   }
 
 }

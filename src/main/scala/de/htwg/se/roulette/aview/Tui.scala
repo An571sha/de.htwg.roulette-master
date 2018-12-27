@@ -1,9 +1,13 @@
 package de.htwg.se.roulette.aview
 
-import de.htwg.se.roulette.controller.Controller
+import de.htwg.se.roulette.controller.{CellChange, Controller}
 import de.htwg.se.roulette.util.Observable
 
-class Tui(controller: Controller) extends Observable{
+import scala.swing.Reactor
+
+class Tui(controller: Controller) extends Reactor {
+
+  listenTo(controller)
 
   val arrayGrid = Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35)
   val string = arrayGrid.mkString(" | ")
@@ -11,29 +15,50 @@ class Tui(controller: Controller) extends Observable{
   println("If you want to play              --> Pls enter: q YourName YourBet YourMoney")
 
   def processInputLine(input: String): Unit = {
+    if (controller.player.bankmoney <= 0) {
+      println("+.+ Game Over +.+")
+      System.exit(1)
+    }
     var a = input.split(" ")
     if (a(0).equals("q")) {
       val name = a(1)
       val bet = a(2)
       val bankmoney = a(3).toInt
       controller.createNewPlayer(name, bet, bankmoney)
-      println("Your bet is: " +controller.player.bet)
+      controller.createTable()
+      /*println("Your bet is: " +controller.player.bet)
       println("Your name is: " +controller.player.name)
       println("You have won: " + controller.createTable())
       println("If you want to change your bet   --> Pls enter: m YourNewBet")
-      println("if you want to end this Game     --> Pls enter: exit")
+      println("if you want to end this Game     --> Pls enter: exit")*/
     } else if (a(0).equals("m")) {
       val bet = a(1)
       controller.changeBet(bet)
-      println("Your bet is: " +controller.player.bet)
       controller.createTable()
-      println("You have won: " +controller.player.bankmoney)
+     /* println("Your bet is: " + controller.player.bet)
+      controller.createTable()
+      println("You have won: " + controller.player.bankmoney)
       println("If you want to change your bet   --> Pls enter: m YourNewBet")
       println("if you want to end this Game     --> Pls enter: exit")
+      */
     } else if (a(0).equals("exit")) {
       println("^(+.+)^Bye^(+.+)^")
       System.exit(1)
     }
+  }
+
+    reactions += {
+      case event: CellChange => update
+    }
+
+    def update: Unit = {
+      println("Your bet is: " +controller.player.bet)
+      println("Your name is: " +controller.player.name)
+      println("You have won: " +controller.player.bankmoney)
+      println("If you want to change your bet   --> Pls enter: m YourNewBet")
+      println("if you want to end this Game     --> Pls enter: exit")
+    }
+
     /*
   input match {
     case "q" =>
@@ -52,5 +77,4 @@ class Tui(controller: Controller) extends Observable{
     case "exit" =>
   }
   }*/
-  }
 }
