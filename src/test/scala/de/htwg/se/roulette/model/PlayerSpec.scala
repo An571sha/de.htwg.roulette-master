@@ -12,13 +12,17 @@ class PlayerSpec extends WordSpec with Matchers {
       "put your bet" in {
         player.bet should be("bet")
       }
-      "put your money" in {
+      /*"put your money" in {
         player.money should be(0)
+      }*/
+      "put your total money" in {
+        player.bankmoney should be(0)
       }
       "have a String presentation" in {
         player.toString should be("Your Name")
-        player.playerBet should be(0)
-        player.updateplayermoney(0) should be(0)
+        player.playerBet should be("bet")
+        //player.updateplayermoney(0) should be(0)
+        player.getbankmoney should be(0)
       }
     }
   }

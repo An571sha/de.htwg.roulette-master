@@ -10,8 +10,8 @@ package de.htwg.se.roulette.model
          player.updateplayermoney(-10)
        }
      }
-     else if(player.playerBet.equals("Green")){
-       if (Game("Green").CheckBet()){
+     else if(player.playerBet.equals("Black")){
+       if (Game("Black").CheckBet()){
          player.updateplayermoney(10)
        }else{
          player.updateplayermoney(-10)
@@ -31,7 +31,14 @@ package de.htwg.se.roulette.model
          player.updateplayermoney(-10)
        }
      }
-     player.bankMoney
+     else if (player.playerBet.equals("Green")) {
+       if (Game("Green").CheckBet()) {
+         player.updateplayermoney(10)
+       } else {
+         player.updateplayermoney(-10)
+       }
+     }
+     player.bankmoney
    }
 
 
