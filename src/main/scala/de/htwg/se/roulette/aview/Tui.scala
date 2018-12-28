@@ -25,7 +25,8 @@ class Tui(controller: Controller) extends Reactor {
       val bet = a(2)
       val bankmoney = a(3).toInt
       controller.createNewPlayer(name, bet, bankmoney)
-      controller.createTable()
+      controller.set(controller.player.bankmoney)
+      //controller.createTable()
       /*println("Your bet is: " +controller.player.bet)
       println("Your name is: " +controller.player.name)
       println("You have won: " + controller.createTable())
@@ -34,7 +35,8 @@ class Tui(controller: Controller) extends Reactor {
     } else if (a(0).equals("m")) {
       val bet = a(1)
       controller.changeBet(bet)
-      controller.createTable()
+      controller.set(controller.player.bankmoney)
+      //controller.createTable()
      /* println("Your bet is: " + controller.player.bet)
       controller.createTable()
       println("You have won: " + controller.player.bankmoney)
@@ -44,6 +46,10 @@ class Tui(controller: Controller) extends Reactor {
     } else if (a(0).equals("exit")) {
       println("^(+.+)^Bye^(+.+)^")
       System.exit(1)
+
+    } else if (a(0).equals("u")) {
+      controller.undo
+      update
     }
   }
 
