@@ -8,9 +8,7 @@ import scala.swing.Reactor
 class Tui(controller: Controller) extends Reactor {
 
   listenTo(controller)
-
   var i = Int
-
   val arrayGrid = Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35)
   val string = arrayGrid.mkString(" | ")
   println(string)
@@ -28,7 +26,6 @@ class Tui(controller: Controller) extends Reactor {
       val bankmoney = a(3).toInt
       controller.createNewPlayer(name, bet, bankmoney)
       controller.set(controller.player.bankmoney)
-      //controller.createTable()
       /*println("Your bet is: " +controller.player.bet)
       println("Your name is: " +controller.player.name)
       println("You have won: " + controller.createTable())
@@ -38,7 +35,6 @@ class Tui(controller: Controller) extends Reactor {
       val bet = a(1)
       controller.changeBet(bet)
       controller.set(controller.player.bankmoney)
-      //controller.createTable()
      /* println("Your bet is: " + controller.player.bet)
       controller.createTable()
       println("You have won: " + controller.player.bankmoney)
@@ -48,7 +44,6 @@ class Tui(controller: Controller) extends Reactor {
     } else if (a(0).equals("exit")) {
       println("^(+.+)^Bye^(+.+)^")
       System.exit(1)
-
     } else if (a(0).equals("u")) {
       controller.undo
       update
@@ -70,11 +65,9 @@ class Tui(controller: Controller) extends Reactor {
       println("If you want to change your bet   --> Pls enter: m YourNewBet")
       println("if you want to end this Game     --> Pls enter: exit")
     }
-
   def printTui: Unit = {
     println(GameStatus.message(controller.gameStatus))
   }
-
     /*
   input match {
     case "q" =>

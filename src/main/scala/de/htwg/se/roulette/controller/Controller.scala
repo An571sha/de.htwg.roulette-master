@@ -1,5 +1,4 @@
 package de.htwg.se.roulette.controller
-
 import de.htwg.se.roulette.controller.GameStatus.{GameStatus, _}
 import de.htwg.se.roulette.model.Player
 import de.htwg.se.roulette.util.UndoManager

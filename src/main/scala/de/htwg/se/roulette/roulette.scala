@@ -3,6 +3,7 @@ import de.htwg.se.roulette.aview.Tui
 import de.htwg.se.roulette.controller.Controller
 import de.htwg.se.roulette.model.Player
 
+import de.htwg.se.roulette.model.{Player, Rtable}
 import scala.io.StdIn.readLine
 object roulette {
     val controller = new Controller(Player("name", "Rot", 20))
