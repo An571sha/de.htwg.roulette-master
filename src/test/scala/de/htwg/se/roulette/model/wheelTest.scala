@@ -4,21 +4,12 @@ import org.scalatest.{Matchers,WordSpec}
 
 class wheelTest extends WordSpec with Matchers {
 
-/*  "wheelColor" when {
+  "wheelColor" when {
     "spinned using the method spin" should {
-      val colourCode: String =  Wheel().wheelColor(7)
-      "have value 7" in {
-        colourCode should be("Red")
+      val Randomnumber: Int = Wheel(1).setRandom()
+      "have SetRandom" in{
+        Randomnumber should be(0)
       }
-      /*wheel().wheelColor(0)
-      "have value 0" in {
-        colourCode should be("black")
-      }*/
+      }
     }
-  }
-  "spin" should{
-    "increase the number the values" in {
-
-    }
-    }*/
   }
