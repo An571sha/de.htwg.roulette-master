@@ -20,14 +20,9 @@ class GameSpec extends WordSpec with Matchers {
 
   "A Number" when {
     "using CheckBet" should {
-      val numberInRange = new Game("Black").CheckBet()
-      val x = Wheel(36).setRandom()
-      "numberInRAnge is ----" in {
-        if (Game("Black").NumberorColor().contains(x)) {
-          numberInRange should be(true)
-        } else{
-          numberInRange should be(false)
-        }
+      val xs = List(Game("Red").CheckBet(),Game("Black").CheckBet())
+      "joining and comparing " in {
+        xs should (contain(true) or contain(false))
       }
     }
   }

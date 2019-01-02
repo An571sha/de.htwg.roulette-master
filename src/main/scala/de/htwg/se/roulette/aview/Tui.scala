@@ -11,8 +11,11 @@ class Tui(controller: Controller) extends Reactor {
   var i = Int
   val arrayGrid = Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35)
   val string = arrayGrid.mkString(" | ")
+  var oldMoney = 0
+  var newMoney = 0
   println(string)
   println("If you want to play              --> Pls enter: q YourName YourBet YourMoney")
+
 
   def processInputLine(input: String): Unit = {
     if (controller.player.bankmoney <= 0) {
@@ -25,22 +28,25 @@ class Tui(controller: Controller) extends Reactor {
       val bet = a(2)
       val bankmoney = a(3).toInt
       controller.createNewPlayer(name, bet, bankmoney)
+      oldMoney = controller.player.getbankmoney
       controller.set(controller.player.bankmoney)
-      /*println("Your bet is: " +controller.player.bet)
-      println("Your name is: " +controller.player.name)
-      println("You have won: " + controller.createTable())
-      println("If you want to change your bet   --> Pls enter: m YourNewBet")
-      println("if you want to end this Game     --> Pls enter: exit")*/
-    } else if (a(0).equals("m")) {
+      newMoney = controller.player.getbankmoney
+      if (oldMoney<newMoney){
+        println("You Have Won!")
+      }else {
+        println("You have Lost!")
+      }
+    }else if (a(0).equals("m")){
       val bet = a(1)
       controller.changeBet(bet)
+      oldMoney = controller.player.getbankmoney
       controller.set(controller.player.bankmoney)
-     /* println("Your bet is: " + controller.player.bet)
-      controller.createTable()
-      println("You have won: " + controller.player.bankmoney)
-      println("If you want to change your bet   --> Pls enter: m YourNewBet")
-      println("if you want to end this Game     --> Pls enter: exit")
-      */
+      newMoney = controller.player.getbankmoney
+      if (oldMoney<newMoney){
+        println("You Have Won!")
+      }else{
+        println("You have Lost!")
+      }
     } else if (a(0).equals("exit")) {
       println("^(+.+)^Bye^(+.+)^")
       System.exit(1)

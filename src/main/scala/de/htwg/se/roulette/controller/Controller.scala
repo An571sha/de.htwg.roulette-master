@@ -17,14 +17,6 @@ class Controller(var player: Player) extends Publisher {
     gameStatus= PLAYED
     publish(new EventHappens)
   }
-  /*def createTable(): Int ={
-    var rtable = new Rtable(player)
-    var r = rtable.play()
-    gameStatus= PLAYED
-    publish(new CellChange)
-    publish(new EventHappens)
-    r
-  }*/
   def set(bankmoney: Int): Unit ={
     undoManager.doStep(new SetCommand(bankmoney, player,this))
     gameStatus= SET

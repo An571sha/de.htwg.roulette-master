@@ -33,9 +33,9 @@ package de.htwg.se.roulette.model
      }
      else if (player.playerBet.equals("Green")) {
        if (Game("Green").CheckBet()) {
-         player.updateplayermoney(10)
+         player.updateplayermoney(100)
        } else {
-         player.updateplayermoney(-10)
+         player.updateplayermoney(-15)
        }
      }
      player.bankmoney
