@@ -1,5 +1,6 @@
-package de.htwg.se.roulette.model
-import de.htwg.se.roulette.model.Rtable
+package de.htwg.se.roulette.model.gameComponent.gameBaseImpl
+
+//import de.htwg.se.roulette.model.gameComponent.gameInterface
 
 case class Game(val choice: String) {
 

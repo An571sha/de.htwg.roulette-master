@@ -1,5 +1,6 @@
 package de.htwg.se.roulette.model
 
+import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Game
 import org.scalatest._
 
 class GameSpec extends WordSpec with Matchers {
@@ -49,57 +50,4 @@ class GameSpec extends WordSpec with Matchers {
     }
   }
 
-  /*"To check your bet, check bet" should {
-    val bet = new Game("Red").CheckBet()
-    "with only the number 1 as your random number" in {
-      bet should be(Wheel(1).setRandom())
-    }
-  }*/
-  /*"if Check bet is true then black" should {
-    val black = new wheel().value;
-    "black is selected" in {
-      Game("Black").NumberorColor() should be(black)
-    }
-  }
-  "The choice for Red or Black" when {
-    "new" should {
-      val RBnumbers = new Game("Red")
-      "with choice Red" in {
-        RBnumbers.RedOrBlack() should be(Array(1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36))
-      }
-    }
-    "new" should {
-      val RBnumbers = new Game("Black")
-      "with choice Black" in {
-        RBnumbers.RedOrBlack() should be(Array(2, 4, 6, 8, 10, 13, 15, 17, 20, 22, 24, 26, 28, 31, 33, 35))
-      }
-    }
-    "new" should {
-      val RBnumbers = new Game("Green")
-      "with choice Green" in {
-        RBnumbers.RedOrBlack() should be(Array(0))
-      }
-    }
-    "new" should {
-      val RBnumbers = new Game("something")
-      "with a not existential choice" in{
-        RBnumbers.RedOrBlack() should be(null)
-      }
-    }
-  }
-  "The method OddOrEven" when {
-    "input is Even" should {
-      val evenNB = new Game("Even")
-      "with choice Even" in {
-        evenNB.OddOrEven() should be(Game("Even").Even)
-      }
-    }
-    "new" should {
-      val evenNB = new Game("Odd")
-      "with choice Odd" in {
-        evenNB.OddOrEven() should be(Game("Odd").Odd)
-      }
-    }
-  }
-  */
 }
