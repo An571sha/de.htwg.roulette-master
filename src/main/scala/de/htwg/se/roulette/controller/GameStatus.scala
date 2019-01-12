@@ -1,7 +1,7 @@
 package de.htwg.se.roulette.controller
 
 object GameStatus extends Enumeration {
-  type GameStatus = Value
+  /*type GameStatus = Value
   val IDLE, PLAYED , SET, UNDO, REDO , NEWBET = Value
 
   val map = Map[GameStatus, String](
@@ -16,5 +16,7 @@ object GameStatus extends Enumeration {
 
   def message(gameStatus: GameStatus) = {
     map(gameStatus)
+
   }
+  */
 }
