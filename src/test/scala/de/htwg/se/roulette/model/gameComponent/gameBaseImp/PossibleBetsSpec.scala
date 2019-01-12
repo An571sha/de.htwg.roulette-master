@@ -1,9 +1,9 @@
-package de.htwg.se.roulette.model
+package de.htwg.se.roulette.model.gameComponent.gameBaseImp
 
 import org.scalatest._
 
 class PossibleBetsSpec extends WordSpec with Matchers {
-  "A PossibleBet" when {
+  /*"A PossibleBet" when {
     "new" should {
       val possibleBets = PossibleBets(1)
       "get the mulstiplicator from Bet" in {
@@ -13,5 +13,5 @@ class PossibleBetsSpec extends WordSpec with Matchers {
         possibleBets.PossibleOptions().options should be("Odd or Even")
       }
     }
-  }
+  }*/
 }

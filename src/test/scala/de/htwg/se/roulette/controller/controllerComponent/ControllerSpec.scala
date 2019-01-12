@@ -1,4 +1,4 @@
-package de.htwg.se.roulette.controller
+package de.htwg.se.roulette.controller.controllerComponent
 
 import de.htwg.se.roulette.controller.controllerComponent.controllerBaseImpl.Controller
 import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Player
@@ -21,4 +21,3 @@ class controllerSpec extends WordSpec with Matchers {
     }
   }
 }
-

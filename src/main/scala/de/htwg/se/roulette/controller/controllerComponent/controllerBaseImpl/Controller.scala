@@ -1,11 +1,14 @@
-package de.htwg.se.roulette.controller
-import de.htwg.se.roulette.controller.GameStatus.{GameStatus, _}
-import de.htwg.se.roulette.model.Player
+package de.htwg.se.roulette.controller.controllerComponent.controllerBaseImpl
+
+import de.htwg.se.roulette.controller.controllerComponent.GameStatus._
+import de.htwg.se.roulette.controller.controllerComponent._
+import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Player
+//import de.htwg.se.roulette.model.gameComponent.gameBaseImpl._
 import de.htwg.se.roulette.util.UndoManager
 
 import scala.swing.Publisher
 
-class Controller(var player: Player) extends Publisher {
+class Controller(var player: Player) extends ControllerInterface with Publisher {
 
   def statusText:String =  GameStatus.message(gameStatus)
 
@@ -17,6 +20,14 @@ class Controller(var player: Player) extends Publisher {
     gameStatus= PLAYED
     publish(new EventHappens)
   }
+  /*def createTable(): Int ={
+    var rtable = new Rtable(player)
+    var r = rtable.play()
+    gameStatus= PLAYED
+    publish(new CellChange)
+    publish(new EventHappens)
+    r
+  }*/
   def set(bankmoney: Int): Unit ={
     undoManager.doStep(new SetCommand(bankmoney, player,this))
     gameStatus= SET
