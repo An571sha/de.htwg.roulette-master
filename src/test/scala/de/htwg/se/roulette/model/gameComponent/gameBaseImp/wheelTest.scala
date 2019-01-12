@@ -1,6 +1,7 @@
-package de.htwg.se.roulette.model
+package de.htwg.se.roulette.model.gameComponent.gameBaseImp
 
-import org.scalatest.{Matchers,WordSpec}
+import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Wheel
+import org.scalatest.{Matchers, WordSpec}
 
 class wheelTest extends WordSpec with Matchers {
 

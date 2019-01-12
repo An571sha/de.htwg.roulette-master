@@ -1,4 +1,4 @@
-package de.htwg.se.roulette.model
+package de.htwg.se.roulette.model.gameComponent.gameBaseImp
 
 import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Player
 import org.scalatest._

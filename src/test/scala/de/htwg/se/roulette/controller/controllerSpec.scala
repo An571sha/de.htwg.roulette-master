@@ -1,6 +1,7 @@
 package de.htwg.se.roulette.controller
 
-import de.htwg.se.roulette.model.Player
+import de.htwg.se.roulette.controller.controllerComponent.controllerBaseImpl.Controller
+import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Player
 import org.scalatest.{Matchers, WordSpec}
 
 class controllerSpec extends WordSpec with Matchers {
