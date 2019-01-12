@@ -21,4 +21,12 @@ class Controller(var game: tableInterface) extends ControllerInterface{
   override def undo: Unit = {}
 
   override def redo: Unit = {}
+
+  override def getbankmoney: Int = 1
+
+  override def bankmoney: Int = 1
+
+  override def name: String = "name"
+
+  override def bet: String = "bet"
 }

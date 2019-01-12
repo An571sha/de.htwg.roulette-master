@@ -10,7 +10,7 @@ import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Player
 import scala.collection.immutable.Range.Int
 import scala.swing.Reactor
 
-class Tui(controller: Controller) extends Reactor {
+class Tui(controller: ControllerInterface) extends Reactor {
 
   listenTo(controller)
   var i = Int
@@ -22,7 +22,7 @@ class Tui(controller: Controller) extends Reactor {
   println("If you want to play              --> Pls enter: q YourName YourBet YourMoney")
 
   def processInputLine(input: String): Unit = {
-    if (controller.player.bankmoney <= 0) {
+    if (controller.bankmoney <= 0) {
       println("+.+ Game Over +.+")
       System.exit(1)
     }
@@ -32,9 +32,9 @@ class Tui(controller: Controller) extends Reactor {
       val bet = a(2)
       val bankmoney = a(3).toInt
       controller.createNewPlayer(name, bet, bankmoney)
-      oldMoney = controller.player.getbankmoney
-      controller.set(controller.player.bankmoney)
-      newMoney = controller.player.getbankmoney
+      oldMoney = controller.getbankmoney
+      controller.set(controller.bankmoney)
+      newMoney = controller.getbankmoney
       if (oldMoney<newMoney){
         println("You Have Won!")
       }else {
@@ -48,9 +48,9 @@ class Tui(controller: Controller) extends Reactor {
     } else if (a(0).equals("m")) {
       val bet = a(1)
       controller.changeBet(bet)
-      oldMoney = controller.player.getbankmoney
-      controller.set(controller.player.bankmoney)
-      newMoney = controller.player.getbankmoney
+      oldMoney = controller.getbankmoney
+      controller.set(controller.bankmoney)
+      newMoney = controller.getbankmoney
       if (oldMoney<newMoney){
         println("You Have Won!")
       }else{
@@ -80,9 +80,9 @@ class Tui(controller: Controller) extends Reactor {
     }
 
     def update: Unit = {
-      println("Your bet is: " +controller.player.bet)
-      println("Your name is: " +controller.player.name)
-      println("You have won: " +controller.player.bankmoney)
+      println("Your bet is: " +controller.bet)
+      println("Your name is: " +controller.name)
+      println("You have won: " +controller.bankmoney)
       println("If you want to change your bet   --> Pls enter: m YourNewBet")
       println("if you want to end this Game     --> Pls enter: exit")
     }

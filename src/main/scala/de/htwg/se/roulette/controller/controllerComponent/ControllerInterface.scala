@@ -1,10 +1,15 @@
 package de.htwg.se.roulette.controller.controllerComponent
 import de.htwg.se.roulette.controller.controllerComponent._
 import de.htwg.se.roulette.controller.controllerComponent.GameStatus.GameStatus
+import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Player
 import de.htwg.se.roulette.model.gameComponent.tableInterface
 
 import scala.swing.Publisher
 trait ControllerInterface extends Publisher {
+
+  def getbankmoney: Int
+
+  def bankmoney: Int
 
   def statusText: String
 
@@ -17,6 +22,12 @@ trait ControllerInterface extends Publisher {
   def undo: Unit
 
   def redo: Unit
+
+  def gameStatus:GameStatus
+
+  def name:String
+
+  def bet:String
 }
 
   import scala.swing.event.Event
