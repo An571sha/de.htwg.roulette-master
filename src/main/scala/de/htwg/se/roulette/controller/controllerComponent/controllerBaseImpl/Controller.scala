@@ -51,5 +51,17 @@ class Controller(var player: Player) extends ControllerInterface with Publisher 
     gameStatus= REDO
     publish(new EventHappens)
   }
+  def getbankmoney: Int = {
+    player.getbankmoney
+  }
+  def bankmoney: Int = {
+    player.bankmoney
+  }
+  def bet: String = {
+    player.bet
+  }
+  def name: String = {
+    player.name
+  }
 
 }
