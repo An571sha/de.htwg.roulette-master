@@ -1,7 +1,8 @@
 package de.htwg.se.roulette.aview
 
-import de.htwg.se.roulette.controller.{CellChange, Controller, EventHappens}
-import de.htwg.se.roulette.controller.GameStatus
+import de.htwg.se.roulette.controller.controllerComponent.controllerBaseImpl.Controller
+import de.htwg.se.roulette.controller.controllerComponent.{CellChange, EventHappens, GameStatus}
+//import de.htwg.se.roulette.controller.GameStatus
 import scala.collection.immutable.Range.Int
 import scala.swing.Reactor
 
@@ -15,7 +16,6 @@ class Tui(controller: Controller) extends Reactor {
   var newMoney = 0
   println(string)
   println("If you want to play              --> Pls enter: q YourName YourBet YourMoney")
-
 
   def processInputLine(input: String): Unit = {
     if (controller.player.bankmoney <= 0) {
@@ -36,7 +36,12 @@ class Tui(controller: Controller) extends Reactor {
       }else {
         println("You have Lost!")
       }
-    }else if (a(0).equals("m")){
+      /*println("Your bet is: " +controller.player.bet)
+      println("Your name is: " +controller.player.name)
+      println("You have won: " + controller.createTable())
+      println("If you want to change your bet   --> Pls enter: m YourNewBet")
+      println("if you want to end this Game     --> Pls enter: exit")*/
+    } else if (a(0).equals("m")) {
       val bet = a(1)
       controller.changeBet(bet)
       oldMoney = controller.player.getbankmoney
@@ -47,6 +52,12 @@ class Tui(controller: Controller) extends Reactor {
       }else{
         println("You have Lost!")
       }
+     /* println("Your bet is: " + controller.player.bet)
+      controller.createTable()
+      println("You have won: " + controller.player.bankmoney)
+      println("If you want to change your bet   --> Pls enter: m YourNewBet")
+      println("if you want to end this Game     --> Pls enter: exit")
+      */
     } else if (a(0).equals("exit")) {
       println("^(+.+)^Bye^(+.+)^")
       System.exit(1)

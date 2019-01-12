@@ -1,6 +1,8 @@
-package de.htwg.se.roulette.controller
+package de.htwg.se.roulette.controller.controllerComponent.controllerBaseImpl
 
-import de.htwg.se.roulette.model.{Player, Rtable}
+//import de.htwg.se.roulette.controller.controllerComponent.Controller
+import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.{Player, Rtable}
+import de.htwg.se.roulette.model.gameComponent.{tableInterface, wheelInterface}
 import de.htwg.se.roulette.util.Command
 
 class SetCommand(bankmoney: Int, player: Player, controller: Controller) extends Command {
