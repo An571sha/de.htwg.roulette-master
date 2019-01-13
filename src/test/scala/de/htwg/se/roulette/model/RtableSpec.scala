@@ -1,6 +1,7 @@
 package de.htwg.se.roulette.model
 
-import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.{Player, Rtable}
+import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Rtable
+import de.htwg.se.roulette.model.playerComponent.Player
 import org.scalatest.{Matchers, WordSpec}
 
 class RtableSpec extends WordSpec with Matchers {

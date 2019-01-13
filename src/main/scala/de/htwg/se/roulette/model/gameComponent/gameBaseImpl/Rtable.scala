@@ -1,7 +1,7 @@
 package de.htwg.se.roulette.model.gameComponent.gameBaseImpl
 
 import de.htwg.se.roulette.model.gameComponent.tableInterface
-import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Player
+import de.htwg.se.roulette.model.playerComponent.Player
 
 case class Rtable(val player: Player) extends tableInterface {
 

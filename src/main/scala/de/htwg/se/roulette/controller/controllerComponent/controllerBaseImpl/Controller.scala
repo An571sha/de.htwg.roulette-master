@@ -3,8 +3,8 @@ package de.htwg.se.roulette.controller.controllerComponent.controllerBaseImpl
 import de.htwg.se.roulette.controller.controllerComponent._
 import de.htwg.se.roulette.controller.controllerComponent.GameStatus._
 import de.htwg.se.roulette.controller.controllerComponent.controllerBaseImpl.SetCommand
-import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Player
 import de.htwg.se.roulette.model.gameComponent.{tableInterface, wheelInterface}
+import de.htwg.se.roulette.model.playerComponent.{Player, playerInterface}
 //import de.htwg.se.roulette.model.gameComponent.gameBaseImpl._
 import de.htwg.se.roulette.util.UndoManager
 
@@ -34,24 +34,26 @@ class Controller(var player: Player) extends ControllerInterface with Publisher 
     undoManager.doStep(new SetCommand(bankmoney, player,this))
     gameStatus= SET
     publish(new CellChange)
-    publish(new EventHappens)
+    //publish(new EventHappens)
 
   }
   def changeBet(newbet:String): Unit = {
     player = player.copy(bet = newbet)
     gameStatus= NEWBET
-    publish(new EventHappens)
+    //publish(new EventHappens)
   }
   def undo: Unit = {
     undoManager.undoStep
     gameStatus= UNDO
-    publish(new EventHappens)
+    //publish(new EventHappens)
+    publish(new CellChange)
   }
 
   def redo: Unit = {
     undoManager.redoStep
     gameStatus= REDO
-    publish(new EventHappens)
+    //publish(new EventHappens)
+    publish(new CellChange)
   }
   def getbankmoney: Int = {
     player.getbankmoney

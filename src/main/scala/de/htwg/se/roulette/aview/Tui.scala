@@ -4,8 +4,8 @@ import de.htwg.se.roulette.controller.controllerComponent.GameStatus
 import de.htwg.se.roulette.controller.controllerComponent.ControllerInterface
 import de.htwg.se.roulette.controller.controllerComponent.controllerBaseImpl.Controller
 import de.htwg.se.roulette.controller.controllerComponent.{CellChange, EventHappens}
+import de.htwg.se.roulette.model.playerComponent.Player
 //import de.htwg.se.roulette.controller.GameStatus
-import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Player
 
 import scala.collection.immutable.Range.Int
 import scala.swing.Reactor
@@ -67,16 +67,16 @@ class Tui(controller: ControllerInterface) extends Reactor {
       System.exit(1)
     } else if (a(0).equals("u")) {
       controller.undo
-      update
+      //update
     } else if(a(0).equals("r")){
       controller.redo
-      update
+      //update
     }
   }
 
     reactions += {
       case event: CellChange => update
-      case event: EventHappens => printTui
+      //case p: EventHappens => printTui
     }
 
     def update: Unit = {
@@ -85,6 +85,7 @@ class Tui(controller: ControllerInterface) extends Reactor {
       println("You have won: " +controller.bankmoney)
       println("If you want to change your bet   --> Pls enter: m YourNewBet")
       println("if you want to end this Game     --> Pls enter: exit")
+      println(GameStatus.message(controller.gameStatus))
     }
   def printTui: Unit = {
     println(GameStatus.message(controller.gameStatus))

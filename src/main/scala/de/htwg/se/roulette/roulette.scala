@@ -2,8 +2,8 @@ package de.htwg.se.roulette
 import de.htwg.se.roulette.aview.Tui
 import de.htwg.se.roulette.aview.gui.gui
 import de.htwg.se.roulette.controller.controllerComponent.controllerBaseImpl.Controller
+import de.htwg.se.roulette.model.playerComponent.Player
 //import de.htwg.se.roulette.controller.Controller
-import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Player
 import de.htwg.se.roulette.model.gameComponent.tableInterface
 
 
