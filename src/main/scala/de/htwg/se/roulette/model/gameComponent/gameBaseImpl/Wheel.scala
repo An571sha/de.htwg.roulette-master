@@ -12,11 +12,5 @@ case class Wheel(size: Int) extends wheelInterface {
   def setRandom() : Int = {
     Random.nextInt(size)
   }
-
-  /*def spin(): Int = {
-    NumSpins = NumSpins+1
-    setRandom()
-    */
-
-  }
+}
 

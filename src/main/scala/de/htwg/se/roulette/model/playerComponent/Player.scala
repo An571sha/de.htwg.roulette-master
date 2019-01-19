@@ -1,6 +1,6 @@
-package de.htwg.se.roulette.model.gameComponent.gameBaseImpl
+package de.htwg.se.roulette.model.playerComponent
 
-case class Player(val name: String, val bet: String, var bankmoney: Int) extends {
+case class Player(val name: String, val bet: String, var bankmoney: Int) extends playerInterface {
 
   override def toString: String = name
 

@@ -1,7 +1,7 @@
-package de.htwg.se.roulette.controller
+package de.htwg.se.roulette.controller.controllerComponent
 
 import de.htwg.se.roulette.controller.controllerComponent.controllerBaseImpl.Controller
-import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Player
+import de.htwg.se.roulette.model.playerComponent.Player
 import org.scalatest.{Matchers, WordSpec}
 
 class controllerSpec extends WordSpec with Matchers {
@@ -21,4 +21,3 @@ class controllerSpec extends WordSpec with Matchers {
     }
   }
 }
-

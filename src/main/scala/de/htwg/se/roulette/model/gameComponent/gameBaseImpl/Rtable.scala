@@ -1,9 +1,8 @@
 package de.htwg.se.roulette.model.gameComponent.gameBaseImpl
 
 import de.htwg.se.roulette.model.gameComponent.tableInterface
-import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Player
-
-case class Rtable(val player: Player) extends tableInterface {
+import de.htwg.se.roulette.model.playerComponent.Player
+case class Rtable(val player:Player) extends tableInterface {
 
   def play(): Int ={
     if(player.playerBet.equals("Red")){
