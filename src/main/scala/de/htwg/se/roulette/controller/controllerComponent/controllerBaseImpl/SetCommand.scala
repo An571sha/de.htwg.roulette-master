@@ -6,7 +6,7 @@ import de.htwg.se.roulette.model.gameComponent.{tableInterface, wheelInterface}
 import de.htwg.se.roulette.model.playerComponent.Player
 import de.htwg.se.roulette.util.Command
 
-class SetCommand(bankmoney: Int, player: Player, controller: Controller) extends Command {
+class   SetCommand(bankmoney: Int, player: Player, controller: Controller) extends Command {
 
 
   override def doStep: Unit =   controller.player.bankmoney = Rtable(player).play()

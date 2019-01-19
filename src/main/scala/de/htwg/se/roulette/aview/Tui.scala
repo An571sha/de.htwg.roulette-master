@@ -4,6 +4,7 @@ import de.htwg.se.roulette.controller.controllerComponent.GameStatus
 import de.htwg.se.roulette.controller.controllerComponent.ControllerInterface
 import de.htwg.se.roulette.controller.controllerComponent.controllerBaseImpl.Controller
 import de.htwg.se.roulette.controller.controllerComponent.{CellChange, EventHappens}
+import de.htwg.se.roulette.model.fileIoComponent.fileIoJsonImpl.FileIO
 import de.htwg.se.roulette.model.playerComponent.Player
 //import de.htwg.se.roulette.controller.GameStatus
 
@@ -40,6 +41,16 @@ class Tui(controller: ControllerInterface) extends Reactor {
       }else {
         println("You have Lost!")
       }
+    } else if (a(0).equals("read")) {
+      val js = new FileIO
+      var player = new Player("Jan", "Red", 100)
+      player = js.load
+      controller.createNewPlayer(player.toString, player.playerBet, player.getbankmoney)
+    } else if (a(0).equals("save")) {
+      val js = new FileIO
+      var player = new Player(controller.name, controller.bet, controller.bankmoney)
+      js.save(player)
+
     } else if (a(0).equals("m")) {
       val bet = a(1)
       controller.changeBet(bet)
