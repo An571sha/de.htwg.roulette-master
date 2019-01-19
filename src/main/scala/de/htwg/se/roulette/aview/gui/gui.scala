@@ -3,8 +3,6 @@ package de.htwg.se.roulette.aview.gui
 import java.awt.FlowLayout
 
 import scala.swing._
-import scala.swing.event._
-import de.htwg.se.roulette.controller._
 import de.htwg.se.roulette.controller.controllerComponent.{CellChange, ControllerInterface, EventHappens}
 
 import de.htwg.se.roulette.model.fileIoComponent.fileIoJsonImpl.FileIO
@@ -14,26 +12,14 @@ import de.htwg.se.roulette.model.fileIoComponent.FileIOInterface
 import de.htwg.se.roulette.model.playerComponent.Player
 import javax.swing.{ImageIcon, JLabel}
 
-import scala.io.Source._
-
 class gui(controller: ControllerInterface) extends Frame{
   listenTo(controller)
 
   reactions += {
     case event: CellChange => update
-    //case event: EventHappens => frame.update
   }
 
-  /*def update: Unit = {
-    frame.statusline.text_=(controller.gameStatus.toString)
-    frame.nameLine.text_=(controller.name)
-    frame.moneyLine.text_=(controller.bankmoney.toString)
-  }*/
-
   var bet = "bet"
-
-  //preferredSize = new Dimension(420, 340)
-  //def frame = new MainFrame {
 
     def update: Unit = {
       if (controller.bankmoney <= 0) {
@@ -78,7 +64,6 @@ class gui(controller: ControllerInterface) extends Frame{
         contents += new Menu("Edit") {
           contents += new MenuItem(Action("Undo") {
             controller.undo
-            //update
           })
           contents += new MenuItem(Action("Redo") {
             controller.redo
@@ -87,8 +72,6 @@ class gui(controller: ControllerInterface) extends Frame{
         }
         contents += new Menu("Options") {
           contents += new MenuItem(Action("read"){
-            //val  = controller.createFileIO
-            //file.load
             val js = new FileIO
             var player = new Player("Jan", "Red", 100)
             player = js.load
@@ -111,7 +94,6 @@ class gui(controller: ControllerInterface) extends Frame{
       }
       contents += new Label("\n")
       contents += new BoxPanel(Orientation.Horizontal) {
-        //contents += new Label("Your Name: ")
         contents += nameLine
         border = Swing.TitledBorder(Swing.EtchedBorder(Swing.Lowered), "Your Name")
       }
@@ -120,17 +102,6 @@ class gui(controller: ControllerInterface) extends Frame{
         contents += moneyLine
         border = Swing.TitledBorder(Swing.EtchedBorder(Swing.Lowered), "Your Money")
       }
-      //contents += evenB
-      //contents += oddB
-      //contents += redB
-      //contents += blackB
-      //contents += greenB
-      //contents += undoB
-      //contents += redoB
-
-
-      //border = Swing.EmptyBorder(10,10,10,10)
-
       contents += new Label("\n")
 
       contents += new BoxPanel(Orientation.Horizontal) {

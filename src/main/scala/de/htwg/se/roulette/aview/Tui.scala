@@ -40,11 +40,6 @@ class Tui(controller: ControllerInterface) extends Reactor {
       }else {
         println("You have Lost!")
       }
-      /*println("Your bet is: " +controller.player.bet)
-      println("Your name is: " +controller.player.name)
-      println("You have won: " + controller.createTable())
-      println("If you want to change your bet   --> Pls enter: m YourNewBet")
-      println("if you want to end this Game     --> Pls enter: exit")*/
     } else if (a(0).equals("m")) {
       val bet = a(1)
       controller.changeBet(bet)
@@ -56,12 +51,6 @@ class Tui(controller: ControllerInterface) extends Reactor {
       }else{
         println("You have Lost!")
       }
-     /* println("Your bet is: " + controller.player.bet)
-      controller.createTable()
-      println("You have won: " + controller.player.bankmoney)
-      println("If you want to change your bet   --> Pls enter: m YourNewBet")
-      println("if you want to end this Game     --> Pls enter: exit")
-      */
     } else if (a(0).equals("exit")) {
       println("^(+.+)^Bye^(+.+)^")
       System.exit(1)
@@ -70,13 +59,11 @@ class Tui(controller: ControllerInterface) extends Reactor {
       //update
     } else if(a(0).equals("r")){
       controller.redo
-      //update
     }
   }
 
     reactions += {
       case event: CellChange => update
-      //case p: EventHappens => printTui
     }
 
     def update: Unit = {
@@ -90,22 +77,4 @@ class Tui(controller: ControllerInterface) extends Reactor {
   def printTui: Unit = {
     println(GameStatus.message(controller.gameStatus))
   }
-    /*
-  input match {
-    case "q" =>
-      val a = input.split(" ")
-      val name = a(1)
-      val bet = a(2)
-      val bankmoney = a(3).toInt
-      controller.createNewPlayer(name, bet, bankmoney)
-      controller.createTable()
-
-    case "m"=>
-      val a = input.split(" ")
-      val bet = a(1)
-      controller.changeBet(bet)
-      controller.createTable()
-    case "exit" =>
-  }
-  }*/
 }

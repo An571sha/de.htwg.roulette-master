@@ -25,20 +25,6 @@ class FileIO extends FileIOInterface {
   override def save(player: Player): Unit = {
     val pw = new PrintWriter(new File("C:\\Users\\jan\\.IntelliJIdea2018.1\\de.htwg.roulette-master\\src\\main\\scala\\de\\htwg\\se\\roulette\\FILES\\test.xml"))
     val prettyPrinter = new PrettyPrinter(120,4)
-
-
-    //def playerToXML(player: Player):Elem = {
-      /*val strName = player.name
-      val strBet = player.bet
-      val strMoney = player.getbankmoney
-      */
-
-      /*strName.append(player.name)
-      //strName.append(",")
-      strBet.append(player.bet)
-      //strBet.append(",")
-      strMoney.append(player.getbankmoney)
-*/
       val PLAYER =
       <player>
         <PlayerName>{player.name.toString}</PlayerName>

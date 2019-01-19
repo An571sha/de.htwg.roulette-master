@@ -1,6 +1,5 @@
-package de.htwg.se.roulette.model
+package de.htwg.se.roulette.model.gameComponent.gameBaseImpl
 
-import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Rtable
 import de.htwg.se.roulette.model.playerComponent.Player
 import org.scalatest.{Matchers, WordSpec}
 

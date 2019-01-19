@@ -1,6 +1,5 @@
-package de.htwg.se.roulette.model
+package de.htwg.se.roulette.model.gameComponent.gameBaseImpl
 
-import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Game
 import org.scalatest._
 
 class GameSpec extends WordSpec with Matchers {
