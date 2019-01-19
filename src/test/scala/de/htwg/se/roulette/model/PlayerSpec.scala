@@ -1,6 +1,6 @@
 package de.htwg.se.roulette.model
 
-import de.htwg.se.roulette.model.playerComponent.Player
+import  de.htwg.se.roulette.model.playerComponent.Player
 import org.scalatest._
 
 class PlayerSpec extends WordSpec with Matchers {

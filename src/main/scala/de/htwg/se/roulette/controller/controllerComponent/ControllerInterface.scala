@@ -1,6 +1,7 @@
 package de.htwg.se.roulette.controller.controllerComponent
 import de.htwg.se.roulette.controller.controllerComponent._
 import de.htwg.se.roulette.controller.controllerComponent.GameStatus.GameStatus
+import de.htwg.se.roulette.model.fileIoComponent.FileIOInterface
 import de.htwg.se.roulette.model.gameComponent.tableInterface
 import de.htwg.se.roulette.model.playerComponent.Player
 
@@ -28,6 +29,8 @@ trait ControllerInterface extends Publisher {
   def name:String
 
   def bet:String
+
+  //def createFileIO: FileIOInterface
 }
 
   import scala.swing.event.Event

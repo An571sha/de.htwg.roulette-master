@@ -6,6 +6,12 @@ import scala.swing._
 import scala.swing.event._
 import de.htwg.se.roulette.controller._
 import de.htwg.se.roulette.controller.controllerComponent.{CellChange, ControllerInterface, EventHappens}
+
+import de.htwg.se.roulette.model.fileIoComponent.fileIoJsonImpl.FileIO
+//import de.htwg.se.roulette.model.fileIoComponent.fileIoXmlImpl.FileIO
+import de.htwg.se.roulette.model.fileIoComponent.FileIOInterface
+
+import de.htwg.se.roulette.model.playerComponent.Player
 import javax.swing.{ImageIcon, JLabel}
 
 import scala.io.Source._
@@ -32,6 +38,7 @@ class gui(controller: ControllerInterface) extends Frame{
     def update: Unit = {
       if (controller.bankmoney <= 0) {
         result.text_=("^+.+^ GAME OVER ^+.+^")
+        repaint()
         Thread.sleep(5000)
         System.exit(0)
       }
@@ -78,12 +85,29 @@ class gui(controller: ControllerInterface) extends Frame{
             update
           })
         }
+        contents += new Menu("Options") {
+          contents += new MenuItem(Action("read"){
+            //val  = controller.createFileIO
+            //file.load
+            val js = new FileIO
+            var player = new Player("Jan", "Red", 100)
+            player = js.load
+            controller.createNewPlayer(player.toString, player.playerBet, player.getbankmoney)
+            update
+          })
+          contents += new MenuItem(Action("save") {
+            val js = new FileIO
+            var player = new Player(controller.name, controller.bet, controller.bankmoney)
+            js.save(player)
+          })
+        }
       }
 
     contents = new BoxPanel(Orientation.Vertical) {
       contents += new BoxPanel(Orientation.Horizontal) {
         contents += statusline
         border = Swing.TitledBorder(Swing.EtchedBorder(Swing.Raised), "Status")
+        border = Swing.EmptyBorder(10, 10, 10, 10)
       }
       contents += new Label("\n")
       contents += new BoxPanel(Orientation.Horizontal) {

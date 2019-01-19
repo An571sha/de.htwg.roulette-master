@@ -1,8 +1,12 @@
 package de.htwg.se.roulette.controller.controllerComponent.controllerBaseImpl
 
+import com.google.inject.{Guice, Inject}
+import de.htwg.se.roulette.RouletteModule
+import net.codingwell.scalaguice.InjectorExtensions._
 import de.htwg.se.roulette.controller.controllerComponent._
 import de.htwg.se.roulette.controller.controllerComponent.GameStatus._
 import de.htwg.se.roulette.controller.controllerComponent.controllerBaseImpl.SetCommand
+import de.htwg.se.roulette.model.fileIoComponent.FileIOInterface
 import de.htwg.se.roulette.model.gameComponent.{tableInterface, wheelInterface}
 import de.htwg.se.roulette.model.playerComponent.{Player, playerInterface}
 //import de.htwg.se.roulette.model.gameComponent.gameBaseImpl._
@@ -10,7 +14,9 @@ import de.htwg.se.roulette.util.UndoManager
 
 import scala.swing.Publisher
 
-class Controller(var player: Player) extends ControllerInterface with Publisher {
+class Controller @Inject()(var player: Player) extends ControllerInterface with Publisher {
+
+  val injector = Guice.createInjector(new RouletteModule)
 
   def statusText:String =  GameStatus.message(gameStatus)
 
@@ -67,5 +73,8 @@ class Controller(var player: Player) extends ControllerInterface with Publisher 
   def name: String = {
     player.name
   }
+  /*def createFileIO(): FileIOInterface = {
+    injector.instance[FileIOInterface]
+  }*/
 
 }
