@@ -1,7 +1,12 @@
 package de.htwg.se.roulette.aview
 
-import de.htwg.se.roulette.controller.controllerComponent.{CellChange, ControllerInterface, EventHappens, GameStatus}
+import de.htwg.se.roulette.controller.controllerComponent.GameStatus
+import de.htwg.se.roulette.controller.controllerComponent.ControllerInterface
+import de.htwg.se.roulette.controller.controllerComponent.controllerBaseImpl.Controller
+import de.htwg.se.roulette.controller.controllerComponent.{CellChange, EventHappens}
+import de.htwg.se.roulette.model.playerComponent.Player
 //import de.htwg.se.roulette.controller.GameStatus
+
 import scala.collection.immutable.Range.Int
 import scala.swing.Reactor
 
@@ -35,11 +40,6 @@ class Tui(controller: ControllerInterface) extends Reactor {
       }else {
         println("You have Lost!")
       }
-      /*println("Your bet is: " +controller.player.bet)
-      println("Your name is: " +controller.player.name)
-      println("You have won: " + controller.createTable())
-      println("If you want to change your bet   --> Pls enter: m YourNewBet")
-      println("if you want to end this Game     --> Pls enter: exit")*/
     } else if (a(0).equals("m")) {
       val bet = a(1)
       controller.changeBet(bet)
@@ -51,27 +51,19 @@ class Tui(controller: ControllerInterface) extends Reactor {
       }else{
         println("You have Lost!")
       }
-     /* println("Your bet is: " + controller.player.bet)
-      controller.createTable()
-      println("You have won: " + controller.player.bankmoney)
-      println("If you want to change your bet   --> Pls enter: m YourNewBet")
-      println("if you want to end this Game     --> Pls enter: exit")
-      */
     } else if (a(0).equals("exit")) {
       println("^(+.+)^Bye^(+.+)^")
       System.exit(1)
     } else if (a(0).equals("u")) {
       controller.undo
-      update
+      //update
     } else if(a(0).equals("r")){
       controller.redo
-      update
     }
   }
 
     reactions += {
       case event: CellChange => update
-      case event: EventHappens => printTui
     }
 
     def update: Unit = {
@@ -80,26 +72,9 @@ class Tui(controller: ControllerInterface) extends Reactor {
       println("You have won: " +controller.bankmoney)
       println("If you want to change your bet   --> Pls enter: m YourNewBet")
       println("if you want to end this Game     --> Pls enter: exit")
+      println(GameStatus.message(controller.gameStatus))
     }
   def printTui: Unit = {
     println(GameStatus.message(controller.gameStatus))
   }
-    /*
-  input match {
-    case "q" =>
-      val a = input.split(" ")
-      val name = a(1)
-      val bet = a(2)
-      val bankmoney = a(3).toInt
-      controller.createNewPlayer(name, bet, bankmoney)
-      controller.createTable()
-
-    case "m"=>
-      val a = input.split(" ")
-      val bet = a(1)
-      controller.changeBet(bet)
-      controller.createTable()
-    case "exit" =>
-  }
-  }*/
 }

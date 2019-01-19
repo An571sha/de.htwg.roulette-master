@@ -2,8 +2,8 @@ package de.htwg.se.roulette.aview
 
 //import de.htwg.se.roulette.controller.Controller
 import de.htwg.se.roulette.controller.controllerComponent.controllerBaseImpl.Controller
+import de.htwg.se.roulette.model.playerComponent.Player
 //mport de.htwg.se.roulette.model.Player
-import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Player
 import org.scalatest.{Matchers, WordSpec}
 
 class TuiSpec extends WordSpec with Matchers {

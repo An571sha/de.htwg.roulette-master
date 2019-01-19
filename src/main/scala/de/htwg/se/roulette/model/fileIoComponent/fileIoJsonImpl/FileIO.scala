@@ -13,7 +13,7 @@ class FileIO extends FileIOInterface {
 
   override def load: Player = {
     var player: Player = null
-    val source: String = Source.fromFile("C:\\Users\\jan\\.IntelliJIdea2018.1\\de.htwg.roulette-master\\src\\main\\scala\\de\\htwg\\se\\roulette\\FILES\\test.json").getLines().mkString
+    val source: String = Source.fromFile("/Users/animesh/Desktop/de.htwg.roulette-master/src/main/scala/de/htwg/se/roulette/FILES/test.json").getLines().mkString
     val json: JsValue = Json.parse(source)
     val playerName = (json \ "player" \ "name").get.toString()
     val playerBet = (json \ "player" \ "bet").get.toString()
@@ -26,7 +26,7 @@ class FileIO extends FileIOInterface {
   }
 
   override def save(player: Player): Unit = {
-    val pw = new PrintWriter(new File("C:\\Users\\jan\\.IntelliJIdea2018.1\\de.htwg.roulette-master\\src\\main\\scala\\de\\htwg\\se\\roulette\\FILES\\test.json"))
+    val pw = new PrintWriter(new File("/Users/animesh/Desktop/de.htwg.roulette-master/src/main/scala/de/htwg/se/roulette/FILES/test.json"))
     pw.write(Json.prettyPrint(PlayertoJson(player)))
     pw.close
     println("finished writing")

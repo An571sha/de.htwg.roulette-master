@@ -1,7 +1,7 @@
 package de.htwg.se.roulette.controller.controllerComponent
 
 import de.htwg.se.roulette.controller.controllerComponent.controllerBaseImpl.Controller
-import de.htwg.se.roulette.model.gameComponent.gameBaseImpl.Player
+import de.htwg.se.roulette.model.playerComponent.Player
 import org.scalatest.{Matchers, WordSpec}
 
 class controllerSpec extends WordSpec with Matchers {
@@ -18,11 +18,6 @@ class controllerSpec extends WordSpec with Matchers {
       controller.statusText should be("Undo")
       controller.redo
       controller.statusText should be("Redo")
-      controller.getbankmoney should (be >= 80 and be <= 110)
-      controller.bankmoney should (be >= 80 and be <= 110)
-      controller.name should be(player.name)
-      controller.bet should be("Black")
     }
   }
 }
-

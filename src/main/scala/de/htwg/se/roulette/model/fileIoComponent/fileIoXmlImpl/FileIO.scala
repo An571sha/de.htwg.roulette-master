@@ -13,7 +13,7 @@ class FileIO extends FileIOInterface {
 
   override def load: Player = {
     var player: Player = null
-    val file = scala.xml.XML.loadFile("C:\\Users\\jan\\.IntelliJIdea2018.1\\de.htwg.roulette-master\\src\\main\\scala\\de\\htwg\\se\\roulette\\FILES\\test.xml")
+    val file = scala.xml.XML.loadFile("/Users/animesh/Desktop/de.htwg.roulette-master/src/main/scala/de/htwg/se/roulette/FILES/test.xml")
     val playerName = (file \\ "PlayerName").text.toString
     val playerBet = (file \\ "PlayerBet").text.toString
     val playerMoney = (file \\ "PlayerMoney").text.toString.toInt
@@ -23,7 +23,7 @@ class FileIO extends FileIOInterface {
   }
 
   override def save(player: Player): Unit = {
-    val pw = new PrintWriter(new File("C:\\Users\\jan\\.IntelliJIdea2018.1\\de.htwg.roulette-master\\src\\main\\scala\\de\\htwg\\se\\roulette\\FILES\\test.xml"))
+    val pw = new PrintWriter(new File("/Users/animesh/Desktop/de.htwg.roulette-master/src/main/scala/de/htwg/se/roulette/FILES/test.xml"))
     val prettyPrinter = new PrettyPrinter(120,4)
       val PLAYER =
       <player>
