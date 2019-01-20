@@ -40,6 +40,18 @@ class Tui(controller: ControllerInterface) extends Reactor {
       }else {
         println("You have Lost!")
       }
+    }else if (a(0).equals("read")) {
+      val js = new FileIO
+      var player = new Player("Jan", "Red", 100)
+      player = js.load
+      controller.createNewPlayer(player.toString, player.playerBet, player.getbankmoney)
+      update
+    } else if (a(0).equals("save")) {
+      val js = new FileIO
+      var player = new Player(controller.name, controller.bet, controller.bankmoney)
+      js.save(player)
+      update
+
     } else if (a(0).equals("m")) {
       val bet = a(1)
       controller.changeBet(bet)
