@@ -20,4 +20,4 @@ libraryDependencies += "net.codingwell" %% "scala-guice" % "4.1.0"
 
 coverageEnabled := true
 
-coverageExcludedPackages := "de.htwg.se.roulette.aview.*"
+coverageExcludedPackages := "de.htwg.se.roulette.aview.gui.*;de.htwg.se.roulette.FILES.*;de.htwg.se.roulette.model.fileIoComponent.*"
