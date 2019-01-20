@@ -11,6 +11,9 @@ This is a very simple Game of roulette developed using [Scala](http://www.scala-
 3. MVC Architecture
 4. Design patterns
 5. Travis CI
+6. Coveralls
 6. Structure 101
 7. Docker
+# The Game
+![alt text](https://raw.githubusercontent.com/An571sha/de.htwg.roulette-master/Docker/img.png)
 
