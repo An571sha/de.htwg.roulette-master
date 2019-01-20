@@ -1,4 +1,4 @@
-package de.htwg.se.roulette.roulette
+package de.htwg.se.roulette.Roulette
 
 import com.google.inject.Guice
 import de.htwg.se.roulette.RouletteModule
