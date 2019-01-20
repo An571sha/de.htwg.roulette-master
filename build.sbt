@@ -22,4 +22,4 @@ coverageEnabled := true
 
 coverageExcludedPackages := "de.htwg.se.roulette.aview.gui.*;de.htwg.se.roulette.FILES.*;de.htwg.se.roulette.model.fileIoComponent.*"
 
-coverageExcludedFiles := "de.htwg.se.roulette.roulette"
+coverageExcludedFiles := "de.htwg.se.roulette.roulette.*"
