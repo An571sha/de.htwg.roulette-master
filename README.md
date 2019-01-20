@@ -14,9 +14,9 @@ This is a very simple Game of roulette developed using [Scala](http://www.scala-
 6. [sbt](https://www.scala-sbt.org/)
 # The Game
 ![alt text](https://raw.githubusercontent.com/An571sha/de.htwg.roulette-master/Docker/img.png)
-A game that provides with 5 possible betting options.
-Red , Black , Odd , Even , <mark>Green</mark>
-* Chances of winning in Green is 2.7% so bet carefully *
+* A game that provides with 5 possible betting options.
+* Red , Black , Odd , Even , <mark>Green</mark>
+* Chances of winning in Green is 2.7% so bet carefully
 You either win or lose. In the course of bettting one can reach 0 and then its game over.
 Option to do undo and redo is provided if things start going offshore.
 
